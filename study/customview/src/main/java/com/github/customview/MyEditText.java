@@ -43,7 +43,6 @@ public class MyEditText extends EditText implements View.OnFocusChangeListener {
         init(attrs);
     }
     private void init(AttributeSet attrs){
-        setRightDrawble();
         if(attrs==null){
             return;
         }
@@ -55,6 +54,8 @@ public class MyEditText extends EditText implements View.OnFocusChangeListener {
         float borderWidth = viewNormal.getDimension(R.styleable.MyEditText_my_et_border_width, 0);
         int solidColor = viewNormal.getColor(R.styleable.MyEditText_my_et_solid, Color.parseColor("#00000000"));
         int borderColor = viewNormal.getColor(R.styleable.MyEditText_my_et_border_color, -1);
+        Drawable clearIcon = viewNormal.getDrawable(R.styleable.MyEditText_my_et_clearIcon);
+        setRightDrawble(clearIcon);
         float dashWidth = viewNormal.getDimension(R.styleable.MyEditText_my_et_border_dashWidth, 0);
         float dashGap = viewNormal.getDimension(R.styleable.MyEditText_my_et_border_dashGap, 0);
         isHiddenClear= viewNormal.getBoolean(R.styleable.MyEditText_my_et_hiddenClear,false);
@@ -82,8 +83,12 @@ public class MyEditText extends EditText implements View.OnFocusChangeListener {
         }
     }
 
-    private void setRightDrawble() {
-        mClearDrawable = getCompoundDrawables()[2];
+    private void setRightDrawble(Drawable clearIcon) {
+        if(clearIcon!=null){
+            mClearDrawable=clearIcon;
+        }else{
+            mClearDrawable = getCompoundDrawables()[2];
+        }
         if (mClearDrawable == null) {
             mClearDrawable = getResources().getDrawable(R.drawable.text_clear);
         }

@@ -14,10 +14,74 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!"/>
-    <com.fast.customview.MyTextView
+    <com.github.customview.MyTextView
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:text="android"
         app:my_tv_all_line="true"
+        app:my_tv_press="@color/colorAccent"
+        />
+    <com.github.customview.MyCheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:my_checkbox_checked="@mipmap/ic_launcher"
+        app:my_checkbox_normal="@mipmap/ic_launcher"
+        app:my_checkbox_checked_drawable="top"
+        android:button="@null"
+        android:text="c"
+        />
+    <com.github.customview.MyEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="android"
+        app:my_et_border_width="1dp"
+        app:my_et_border_color="@color/colorAccent"
+        />
+    <com.github.customview.MyEditText
+        style="@style/editTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="5dp"
+        android:maxLength="30"
+        android:singleLine="true"
+        android:ellipsize="end"
+        app:my_et_border_color="@color/colorAccent"
+        app:my_et_border_width="1px"
+        app:my_et_corner_radius="4px"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        tools:text="afd搭顺风"
+        android:textSize="15sp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        />
+    <com.github.customview.MyEditText
+        android:id="@+id/et_memo_reminder"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="5dp"
+        android:maxLength="30"
+        android:singleLine="true"
+        android:ellipsize="end"
+        app:my_et_border_color="@color/colorAccent"
+        app:my_et_border_width="1px"
+        app:my_et_corner_radius="4px"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        tools:text="afd搭顺风"
+        android:textSize="15sp"
+        android:background="@android:color/transparent"
+        />
+    <com.github.customview.MyEditText
+        android:id="@+id/et_addData_source"
+        style="@style/addDataEditStyle"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="center_vertical"
+        android:hint="请输入相关平台名称,如QQ邮箱账号"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        app:my_et_border_width="1dp"
+        app:my_et_border_color="@color/colorAccent"
         />
 </LinearLayout>
