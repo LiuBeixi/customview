@@ -1,95 +1,248 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.test.view.MainActivity"
+    tools:showIn="@layout/activity_main"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:showIn="@layout/activity_main">
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="20dp"
+    >
 
-    <TextView
-        android:layout_width="wrap_content"
+    <com.github.customview.MyLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.github.customview.MyLinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.github.customview.MyTextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="android"
+                app:my_tv_corner_bottomLeftRadius="25dp"
+                app:my_tv_corner_topRightRadius="25dp"
+                app:my_tv_solid="@color/colorPrimaryDark"
+                />
+
+            <com.github.customview.MyTextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="android"
+                app:my_tv_border_color="@color/colorAccent"
+                app:my_tv_border_width="1dp"
+                app:my_tv_corner_radius="25dp"
+                app:my_tv_solid="@color/colorPrimaryDark"
+                />
+        </com.github.customview.MyLinearLayout>
+
+        <com.github.customview.MyLinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.github.customview.MyLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                >
+
+                <com.github.customview.MyCheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="A"
+                    app:my_checkbox_checked="@drawable/check_select"
+                    app:my_checkbox_checked_color="@color/colorPrimaryDark"
+                    app:my_checkbox_normal="@drawable/check_normal"
+                    app:my_checkbox_normal_color="@color/colorText"
+                    />
+
+                <com.github.customview.MyCheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:checked="false"
+                    android:text="B"
+                    app:my_checkbox_checked="@drawable/check_select"
+                    app:my_checkbox_checked_color="@color/colorPrimaryDark"
+                    app:my_checkbox_normal="@drawable/check_normal"
+                    app:my_checkbox_normal_color="@color/colorText"
+                    />
+            </com.github.customview.MyLinearLayout>
+
+            <com.github.customview.MyLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                >
+                <com.github.customview.MyCheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="android"
+                    app:my_checkbox_checked="@drawable/check_select"
+                    app:my_checkbox_checked_color="@color/colorPrimaryDark"
+                    app:my_checkbox_normal="@drawable/check_normal"
+                    app:my_checkbox_normal_color="@color/colorText"
+                    app:my_checkbox_checked_drawable="top"
+                    android:button="@null"
+                    />
+
+                <com.github.customview.MyCheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:checked="false"
+                    android:text="android"
+                    app:my_checkbox_checked="@drawable/check_select"
+                    app:my_checkbox_checked_color="@color/colorPrimaryDark"
+                    app:my_checkbox_normal="@drawable/check_normal"
+                    app:my_checkbox_normal_color="@color/colorText"
+                    app:my_checkbox_checked_drawable="right"
+                    android:button="@null"
+                    />
+            </com.github.customview.MyLinearLayout>
+        </com.github.customview.MyLinearLayout>
+    </com.github.customview.MyLinearLayout>
+
+    <com.github.customview.MyLinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"/>
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        app:my_ll_all_line="true"
+        app:my_ll_border_color="@color/black"
+        >
+
+        <com.github.customview.MyTextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="40dp"
+            android:gravity="center"
+            android:text="android"
+            app:my_tv_border_color="@color/c_icon"
+            app:my_tv_top_line="true"
+            app:my_tv_left_line="true"
+            />
+
+        <com.github.customview.MyTextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="android"
+            app:my_tv_border_color="@color/c_icon"
+            app:my_tv_right_line="true"
+            app:my_tv_top_line="true"
+            />
+    </com.github.customview.MyLinearLayout>
+
+    <com.github.customview.MyLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        app:my_ll_all_line="true"
+        app:my_ll_border_color="@color/black"
+        >
+
+        <com.github.customview.MyTextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="40dp"
+            android:gravity="center"
+            android:text="android"
+            app:my_tv_border_color="@color/c_icon"
+            app:my_tv_left_line="true"
+            app:my_tv_bottom_line="true"
+            />
+
+        <com.github.customview.MyTextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="android"
+            app:my_tv_border_color="@color/c_icon"
+            app:my_tv_right_line="true"
+            app:my_tv_bottom_line="true"
+            />
+    </com.github.customview.MyLinearLayout>
+
+    <com.github.customview.MyLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <com.github.customview.MyEditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:text="android"
+            app:my_et_border_color="@color/colorPrimary"
+            app:my_et_border_width="1px"
+            android:textSize="14sp"
+            android:textColor="@color/colorText"
+            android:layout_marginRight="10dp"
+            />
+        <com.github.customview.MyEditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:text="android"
+            app:my_et_border_color="@color/colorPrimary"
+            app:my_et_border_width="1px"
+            android:textSize="14sp"
+            android:textColor="@color/colorText"
+            app:my_et_clearIcon="@drawable/text_clear2"
+            />
+    </com.github.customview.MyLinearLayout>
     <com.github.customview.MyTextView
-        android:layout_width="40dp"
+        android:layout_width="match_parent"
         android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
         android:text="android"
+        app:my_tv_press="@color/c_press"
+        app:my_tv_border_color="@color/colorPrimary"
         app:my_tv_all_line="true"
-        app:my_tv_press="@color/colorAccent"
         />
-    <com.github.customview.MyCheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:my_checkbox_checked="@mipmap/ic_launcher"
-        app:my_checkbox_normal="@mipmap/ic_launcher"
-        app:my_checkbox_checked_drawable="top"
-        android:button="@null"
-        android:text="c"
-        />
-    <com.github.customview.MyEditText
+    <com.github.customview.MyTextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
         android:text="android"
-        app:my_et_border_width="1dp"
-        app:my_et_border_color="@color/colorAccent"
-        />
-    <com.github.customview.MyRadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:my_radio_checked="@mipmap/ic_launcher"
-        app:my_radio_normal="@mipmap/ic_launcher"
-        android:text="asdadf"
-        android:checked="true"
-        />
-    <com.github.customview.MyEditText
-        style="@style/editTextStyle"
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:layout_marginTop="5dp"
-        android:maxLength="30"
-        android:singleLine="true"
-        android:ellipsize="end"
-        app:my_et_border_color="@color/colorAccent"
-        app:my_et_border_width="1px"
-        app:my_et_corner_radius="4px"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp"
-        tools:text="afd搭顺风"
-        android:textSize="15sp"
-        android:layout_marginLeft="3dp"
-        android:layout_marginRight="3dp"
-        />
-    <com.github.customview.MyEditText
-        android:id="@+id/et_memo_reminder"
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:layout_marginTop="5dp"
-        android:maxLength="30"
-        android:singleLine="true"
-        android:ellipsize="end"
-        app:my_et_border_color="@color/colorAccent"
-        app:my_et_border_width="1px"
-        app:my_et_corner_radius="4px"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp"
-        tools:text="afd搭顺风"
-        android:textSize="15sp"
-        android:background="@android:color/transparent"
-        />
-    <com.github.customview.MyEditText
-        android:id="@+id/et_addData_source"
-        style="@style/addDataEditStyle"
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:gravity="center_vertical"
-        android:hint="请输入相关平台名称,如QQ邮箱账号"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        app:my_et_border_width="1dp"
-        app:my_et_border_color="@color/colorAccent"
+        app:my_tv_press="@color/c_press"
+        app:my_tv_border_color="@color/colorPrimary"
+        app:my_tv_border_width="1px"
+        app:my_tv_border_dashGap="5dp"
+        app:my_tv_border_dashWidth="8dp"
         />
 </LinearLayout>
+
+</ScrollView>
