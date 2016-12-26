@@ -30,10 +30,12 @@
         <attr name="my_radio_checked" format="reference"/>
         <attr name="my_radio_normal_color" format="color"/>
         <attr name="my_radio_checked_color" format="color"/>
-        <attr name="my_compound_top" format="boolean"/>
-        <attr name="my_compound_bottom" format="boolean"/>
-        <attr name="my_compound_left" format="boolean"/>
-        <attr name="my_compound_right" format="boolean"/>
+        <attr name="my_radio_checked_drawable" format="enum">
+            <enum name="left" value="1"></enum>
+            <enum name="top" value="2"></enum>
+            <enum name="right" value="3"></enum>
+            <enum name="bottom" value="4"></enum>
+        </attr>
     </declare-styleable>
     <declare-styleable name="MyLinearLayout">
         <attr name="my_ll_solid" format="color"/>

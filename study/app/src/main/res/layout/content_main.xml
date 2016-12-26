@@ -37,6 +37,14 @@
         app:my_et_border_width="1dp"
         app:my_et_border_color="@color/colorAccent"
         />
+    <com.github.customview.MyRadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:my_radio_checked="@mipmap/ic_launcher"
+        app:my_radio_normal="@mipmap/ic_launcher"
+        android:text="asdadf"
+        android:checked="true"
+        />
     <com.github.customview.MyEditText
         style="@style/editTextStyle"
         android:layout_width="match_parent"

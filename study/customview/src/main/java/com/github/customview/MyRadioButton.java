@@ -40,10 +40,12 @@ public class MyRadioButton extends RadioButton {
         Drawable my_normal = viewNormal.getDrawable(R.styleable.MyRadioButton_my_radio_normal);
         Drawable my_checked = viewNormal.getDrawable(R.styleable.MyRadioButton_my_radio_checked);
 
-        boolean my_top=viewNormal.getBoolean(R.styleable.MyRadioButton_my_compound_top, false);
+        /*boolean my_top=viewNormal.getBoolean(R.styleable.MyRadioButton_my_compound_top, false);
         boolean my_bottom=viewNormal.getBoolean(R.styleable.MyRadioButton_my_compound_bottom, false);
         boolean my_left=viewNormal.getBoolean(R.styleable.MyRadioButton_my_compound_left, false);
-        boolean my_right=viewNormal.getBoolean(R.styleable.MyRadioButton_my_compound_right, false);
+        boolean my_right=viewNormal.getBoolean(R.styleable.MyRadioButton_my_compound_right, false);*/
+
+        int my_checked_drawable = viewNormal.getInteger(R.styleable.MyRadioButton_my_radio_checked_drawable, 0);
 
         int my_normal_color = viewNormal.getColor(R.styleable.MyRadioButton_my_radio_normal_color, this.getTextColors().getDefaultColor());
         int my_checked_color = viewNormal.getColor(R.styleable.MyRadioButton_my_radio_checked_color,-1);
@@ -53,16 +55,22 @@ public class MyRadioButton extends RadioButton {
             StateListDrawable stateListDrawable = new StateListDrawable();
             stateListDrawable.addState(new int[]{android.R.attr.state_checked}, my_checked);
             stateListDrawable.addState(new int[]{}, my_normal);
-            if(my_top){
-                this.setCompoundDrawablesWithIntrinsicBounds(null, stateListDrawable,null,null);
-            }else if(my_bottom){
-                this.setCompoundDrawablesWithIntrinsicBounds(null, null, null, stateListDrawable);
-            }else if(my_left){
-                this.setCompoundDrawablesWithIntrinsicBounds(stateListDrawable, null, null, null);
-            }else if(my_right){
-                this.setCompoundDrawablesWithIntrinsicBounds(null, null, stateListDrawable, null);
-            }else{
-                this.setButtonDrawable(stateListDrawable);
+            switch (my_checked_drawable){
+                case 0:
+                    this.setButtonDrawable(stateListDrawable);
+                    break;
+                case 1:
+                    this.setCompoundDrawablesWithIntrinsicBounds(stateListDrawable,null,null,null);
+                    break;
+                case 2:
+                    this.setCompoundDrawablesWithIntrinsicBounds(null, stateListDrawable,null,null);
+                    break;
+                case 3:
+                    this.setCompoundDrawablesWithIntrinsicBounds(null,null,stateListDrawable,null);
+                    break;
+                case 4:
+                    this.setCompoundDrawablesWithIntrinsicBounds(null,null,null,stateListDrawable);
+                    break;
             }
 //            this.setCompoundDrawablePadding();
         }
