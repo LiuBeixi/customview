@@ -32,7 +32,6 @@ public class MyCheckBox extends CheckBox {
             init(attrs);
     }
     private void init(AttributeSet attrs){
-        this.setClickable(true);
         if(attrs==null){
             return;
         }

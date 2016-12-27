@@ -35,7 +35,6 @@ public class MyTextView extends TextView {
         init(attrs);
     }
     private void init(AttributeSet attrs){
-        setClickable(true);
         if(attrs==null){
             return;
         }

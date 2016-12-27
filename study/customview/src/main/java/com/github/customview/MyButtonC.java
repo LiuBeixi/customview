@@ -62,7 +62,6 @@ public class MyButtonC extends Button {
     }
 
     private void init(AttributeSet attrs){
-        this.setClickable(true);
         if(attrs==null){
             return;
         }

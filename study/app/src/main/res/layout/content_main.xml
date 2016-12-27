@@ -49,6 +49,7 @@
                 app:my_tv_border_width="1dp"
                 app:my_tv_corner_radius="25dp"
                 app:my_tv_solid="@color/colorPrimaryDark"
+                app:my_tv_press="@color/colorAccent"
                 />
         </com.github.customview.MyLinearLayout>
 
@@ -126,6 +127,7 @@
     </com.github.customview.MyLinearLayout>
 
     <com.github.customview.MyLinearLayout
+        android:id="@+id/tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -134,6 +136,7 @@
         android:padding="20dp"
         app:my_ll_all_line="true"
         app:my_ll_border_color="@color/black"
+        app:my_ll_press="@color/colorAccent"
         >
 
         <com.github.customview.MyTextView

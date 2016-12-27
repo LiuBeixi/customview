@@ -32,7 +32,6 @@ public class MyButton extends Button {
             init(attrs);
     }
     private void init(AttributeSet attrs){
-        this.setClickable(true);
         if(attrs==null){
             return;
         }
