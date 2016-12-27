@@ -24,6 +24,6 @@ dependencies {
 //    testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.4.0'
     compile 'com.android.support:design:23.4.0'
-//    compile 'com.fast:customview:1.0.6'
-    compile project(':customview')
+    compile 'com.github:customview:1.0.1'
+//    compile project(':customview')
 }
