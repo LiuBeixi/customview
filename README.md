@@ -29,7 +29,7 @@
 <br/>my_et_clearIcon——设置清除文本内容的小图标<br/>(默认提供一个小图标,因为项目开发时UI有提清除文本内容的需求,开发中如果每个edittext都要添加一个布局比较麻烦)
 <br/>my_et_hiddenClear——是否隐藏清除的小图标(默认false,如果不需要,或者多行文本输入,可以设置true不显示)
 >### 用Android Studio开发的朋友只需要在gradle文件加上
-[ ![Download](https://api.bintray.com/packages/zhongrui/customview/customview/images/download.svg?version=1.0.0) ](https://bintray.com/zhongrui/customview/customview/1.0.0/link)
+[ ![Download](https://api.bintray.com/packages/zhongrui/customview/customview/images/download.svg) ](https://bintray.com/zhongrui/customview/customview/_latestVersion)
  ```groovy
 	dependencies{
  		compile 'com.github:customview:版本号看上面的蓝色小图片'
