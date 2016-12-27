@@ -24,3 +24,15 @@
 <br/>my_ll_right_line——设置view右边边框
 <br/>my_ll_bottom_line——设置view底下边框
 <br/>my_ll_press——设置点击效果的颜色值(如果view没有设置点击事件是没有press效果的)
+>### MyEditText用法
+<br/>MyEditText除了上面列出的属性还提供了额外两个属性
+<br/>my_et_clearIcon——设置清除文本内容的小图标<br/>(默认提供一个小图标,因为项目开发时UI有提清除文本内容的需求,开发中如果每个edittext都要添加一个布局比较麻烦)
+<br/>my_et_hiddenClear——是否隐藏清除的小图标(默认false,如果不需要,或者多行文本输入,可以设置true不显示)
+>### 用Android Studio开发的朋友只需要在gradle文件加上
+[ ![Download](https://api.bintray.com/packages/zhongrui/customview/customview/images/download.svg?version=1.0.0) ](https://bintray.com/zhongrui/customview/customview/1.0.0/link)
+ ```groovy
+	dependencies{
+ 		compile 'com.github:customview:版本号看上面的蓝色小图片'
+	}
+ ```
+<br/>用eclipse的朋友就下载我的源码
