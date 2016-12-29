@@ -7,7 +7,7 @@
 <br/>my_checkbox_checked_color——设置选中状态时的字体颜色
 <br/>my_checkbox_normal_color——设置未选中状态时的字体颜色
 <br/>my_checkbox_checked_drawable——设置button显示的位置(left,top,right,bottom),默认在左边(注意:在设置这个属性的时候,会显示默认的button样式,此时需要设置button="@null")
->### MyLinearLayout,MyTextView用法
+>### MyLinearLayout,MyTextView,MyButton用法
 <br />my_ll_solid——设置控件填充颜色(类似于background,但是用自定义属性的时候千万别设置background,不然会把自定属性全部覆盖掉,因为这些属性最终是以background设置的)
 <br/>my_ll_border_width——设置view边框宽度
 <br/>my_ll_border_color——设置view边框颜色
@@ -36,4 +36,11 @@
 	}
  ```
 <br/>用eclipse的朋友就下载我的源码
-<br/>目前只提供静态设置属性,后续有时间会加上通过代码动态设置的需求
+### 1.0.2新增代码动态设置背景形状的需求
+<br/>view.setBorderWidth(10);
+<br/>view.setTopLine(true);
+<br/>view.setSolidColor(Color.parseColor("#ffff00"));
+<br/>view.complete();
+<br/>上面是设置部分属性的方法,注意设置完之后一定要调用complete()方法才能生效
+<br/>因为set方法只是收集你想要设置某个形状的各个属性,然后在complete()方法里面汇总生成一个Drawable对象
+<br/>最后设置到view的背景上,简单一点就是complete()方法等价于setBackground()方法
