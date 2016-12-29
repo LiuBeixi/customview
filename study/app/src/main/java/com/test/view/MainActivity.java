@@ -1,5 +1,6 @@
 package com.test.view;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -10,6 +11,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.github.customview.MyCheckBox;
+import com.github.customview.MyEditText;
+import com.github.customview.MyTextView;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -18,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,11 +34,27 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.tv).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"onClick",Toast.LENGTH_LONG).show();
+                /*textView.setBorderWidth(10);
+                textView.setTopLine(true);
+                textView.setSolidColor(Color.parseColor("#ffff00"));
+                textView.complete();*/
+                Toast.makeText(MainActivity.this, "onClick", Toast.LENGTH_LONG).show();
+               /* checkBox.setMy_checked(R.mipmap.ic_launcher);
+                checkBox.setMy_checked_color(R.color.midnightblue);
+                checkBox.complete();
+                et.setClearDrawable(R.mipmap.ic_launcher);
+                et.complete();*/
             }
         });
-    }
 
+//        textView= (MyTextView) findViewById(R.id.MyTextView);
+//        checkBox= (MyCheckBox) findViewById(R.id.cb);
+//        et= (MyEditText) findViewById(R.id.et);
+
+    }
+    MyTextView textView;
+    MyCheckBox checkBox;
+    MyEditText et;
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

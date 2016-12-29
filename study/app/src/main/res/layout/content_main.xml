@@ -10,67 +10,351 @@
     tools:context="com.test.view.MainActivity"
     tools:showIn="@layout/activity_main"
     >
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:paddingLeft="20dp"
-    android:paddingRight="20dp"
-    android:paddingTop="20dp"
-    >
 
-    <com.github.customview.MyLinearLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+            <com.github.customview.MyLinearLayout
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:my_ll_all_line="true"
+                app:my_ll_border_color="@color/colorAccent"
+                app:my_ll_corner_radius="70dp"
+                >
+                <RelativeLayout
+                    android:layout_width="140dp"
+                    android:layout_height="140dp">
+                    <com.github.customview.MyTextView
+                        android:layout_width="@dimen/yuan_width"
+                        android:layout_height="@dimen/yuan_height"
+                        android:gravity="center"
+                        app:my_tv_corner_radius="@dimen/yuan_radius"
+                        app:my_tv_border_color="@color/colorPrimaryDark"
+                        app:my_tv_all_line="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/view"/>
+
+                    <com.github.customview.MyTextView
+                        android:layout_width="@dimen/yuan_width"
+                        android:layout_height="@dimen/yuan_height"
+                        android:gravity="center"
+                        app:my_tv_corner_radius="@dimen/yuan_radius"
+                        app:my_tv_border_color="@color/colorPrimaryDark"
+                        app:my_tv_all_line="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:id="@+id/view2"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="11dp"/>
+                    <com.github.customview.MyTextView
+                        android:layout_width="@dimen/yuan_width"
+                        android:layout_height="@dimen/yuan_height"
+                        android:gravity="center"
+                        app:my_tv_corner_radius="@dimen/yuan_radius"
+                        app:my_tv_border_color="@color/colorPrimaryDark"
+                        app:my_tv_all_line="true"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:id="@+id/view4"/>
+                    <com.github.customview.MyTextView
+                        android:layout_width="@dimen/yuan_width"
+                        android:layout_height="@dimen/yuan_height"
+                        android:gravity="center"
+                        app:my_tv_corner_radius="@dimen/yuan_radius"
+                        app:my_tv_border_color="@color/colorPrimaryDark"
+                        app:my_tv_all_line="true"
+                        android:layout_marginBottom="11dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignLeft="@+id/view2"
+                        android:layout_alignStart="@+id/view2"
+                        android:id="@+id/view3"/>
+                    <com.github.customview.MyTextView
+                        android:layout_width="@dimen/yuan_width"
+                        android:layout_height="@dimen/yuan_height"
+                        android:gravity="center"
+                        app:my_tv_corner_radius="@dimen/yuan_radius"
+                        app:my_tv_border_color="@color/colorPrimaryDark"
+                        app:my_tv_all_line="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignLeft="@+id/view"
+                        android:layout_alignStart="@+id/view"/>
+                    <com.github.customview.MyTextView
+                        android:layout_width="@dimen/yuan_width"
+                        android:layout_height="@dimen/yuan_height"
+                        android:gravity="center"
+                        app:my_tv_corner_radius="@dimen/yuan_radius"
+                        app:my_tv_border_color="@color/colorPrimaryDark"
+                        app:my_tv_all_line="true"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/view5"/>
+                    <com.github.customview.MyTextView
+                        android:layout_width="@dimen/yuan_width"
+                        android:layout_height="@dimen/yuan_height"
+                        android:gravity="center"
+                        app:my_tv_corner_radius="@dimen/yuan_radius"
+                        app:my_tv_border_color="@color/colorPrimaryDark"
+                        app:my_tv_all_line="true"
+                        android:layout_marginBottom="11dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignLeft="@+id/view6"
+                        android:layout_alignStart="@+id/view6"/>
+                    <com.github.customview.MyTextView
+                        android:id="@+id/view6"
+                        android:layout_width="@dimen/yuan_width"
+                        android:layout_height="@dimen/yuan_height"
+                        android:gravity="center"
+                        app:my_tv_corner_radius="@dimen/yuan_radius"
+                        app:my_tv_border_color="@color/colorPrimaryDark"
+                        app:my_tv_all_line="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="11dp"/>
+                </RelativeLayout>
+                <com.github.customview.MyLinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <com.github.customview.MyLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.github.customview.MyTextView
+                            android:layout_width="@dimen/my_width"
+                            android:layout_height="@dimen/my_height"
+                            android:gravity="center"
+                            android:text="A"
+                            app:my_tv_corner_bottomLeftRadius="@dimen/radius"
+                            app:my_tv_corner_topRightRadius="@dimen/radius"
+                            app:my_tv_solid="@color/colorPrimaryDark"
+                            />
+
+                        <com.github.customview.MyTextView
+                            android:layout_width="@dimen/my_width"
+                            android:layout_height="@dimen/my_height"
+                            android:gravity="center"
+                            android:text="B"
+                            app:my_tv_corner_bottomRightRadius="@dimen/radius"
+                            app:my_tv_corner_topLeftRadius="@dimen/radius"
+                            app:my_tv_solid="@color/colorPrimaryDark"
+                            />
+
+                    </com.github.customview.MyLinearLayout>
+
+                </com.github.customview.MyLinearLayout>
+
+                <com.github.customview.MyLinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <com.github.customview.MyTextView
+                        android:layout_width="@dimen/my_width"
+                        android:layout_height="@dimen/my_height"
+                        android:layout_marginLeft="2px"
+                        android:gravity="center"
+                        android:text="C"
+                        app:my_tv_corner_bottomRightRadius="@dimen/radius"
+                        app:my_tv_corner_topLeftRadius="@dimen/radius"
+                        app:my_tv_solid="@color/colorPrimaryDark"
+                        />
+
+                    <com.github.customview.MyTextView
+                        android:layout_width="@dimen/my_width"
+                        android:layout_height="@dimen/my_height"
+                        android:gravity="center"
+                        android:text="D"
+                        app:my_tv_corner_bottomLeftRadius="@dimen/radius"
+                        app:my_tv_corner_topRightRadius="@dimen/radius"
+                        app:my_tv_solid="@color/colorPrimaryDark"
+                        />
+
+                </com.github.customview.MyLinearLayout>
+
+            </com.github.customview.MyLinearLayout>
+
+            <com.github.customview.MyLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="20dp"
+                >
+
+                <com.github.customview.MyLinearLayout
+                    android:layout_width="140dp"
+                    android:layout_height="70dp"
+                    android:orientation="horizontal"
+                    >
+
+                    <com.github.customview.MyLinearLayout
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:orientation="horizontal"
+                        app:my_ll_corner_topLeftRadius="35dp"
+                        app:my_ll_solid="#2CE38F"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <com.github.customview.MyTextView
+                                android:layout_width="@dimen/ll_width"
+                                android:layout_height="@dimen/ll_width"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                app:my_tv_corner_bottomLeftRadius="@dimen/ll_radius"
+                                app:my_tv_corner_topRightRadius="@dimen/ll_radius"
+                                app:my_tv_border_width="2dp"
+                                app:my_tv_solid="#2CE38F"
+                                app:my_tv_border_color="#ffffff"/>
+                        </RelativeLayout>
+                    </com.github.customview.MyLinearLayout>
+
+                    <com.github.customview.MyLinearLayout
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:orientation="horizontal"
+                        app:my_ll_corner_topRightRadius="35dp"
+                        app:my_ll_solid="#14BBF7"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <com.github.customview.MyTextView
+                                android:layout_width="@dimen/ll_width"
+                                android:layout_height="@dimen/ll_width"
+                                app:my_tv_corner_bottomRightRadius="@dimen/ll_radius"
+                                app:my_tv_corner_topLeftRadius="@dimen/ll_radius"
+                                app:my_tv_border_width="2dp"
+                                app:my_tv_solid="#14BBF7"
+                                app:my_tv_border_color="#ffffff"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"/>
+                        </RelativeLayout>
+                    </com.github.customview.MyLinearLayout>
+                </com.github.customview.MyLinearLayout>
+
+                <com.github.customview.MyLinearLayout
+                    android:layout_width="140dp"
+                    android:layout_height="70dp"
+                    android:orientation="horizontal"
+                    >
+
+                    <com.github.customview.MyLinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <com.github.customview.MyLinearLayout
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:orientation="horizontal"
+                            app:my_ll_corner_bottomLeftRadius="35dp"
+                            app:my_ll_solid="#FFD586"
+                            >
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+
+                                <com.github.customview.MyTextView
+                                    android:layout_width="@dimen/ll_width"
+                                    android:layout_height="@dimen/ll_width"
+                                    app:my_tv_corner_bottomRightRadius="@dimen/ll_radius"
+                                    app:my_tv_corner_topLeftRadius="@dimen/ll_radius"
+                                    app:my_tv_border_width="2dp"
+                                    app:my_tv_solid="#FFD586"
+                                    app:my_tv_border_color="#ffffff"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_alignParentEnd="true"/>
+                            </RelativeLayout>
+                        </com.github.customview.MyLinearLayout>
+
+                        <com.github.customview.MyLinearLayout
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:orientation="horizontal"
+                            app:my_ll_corner_bottomRightRadius="35dp"
+                            app:my_ll_solid="#FF7B6F"
+                            >
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+
+                                <com.github.customview.MyTextView
+                                    android:layout_width="@dimen/ll_width"
+                                    android:layout_height="@dimen/ll_width"
+                                    app:my_tv_corner_bottomLeftRadius="@dimen/ll_radius"
+                                    app:my_tv_corner_topRightRadius="@dimen/ll_radius"
+                                    app:my_tv_border_width="2dp"
+                                    app:my_tv_solid="#FF7B6F"
+                                    app:my_tv_border_color="#ffffff"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"/>
+                            </RelativeLayout>
+                        </com.github.customview.MyLinearLayout>
+                    </com.github.customview.MyLinearLayout>
+                </com.github.customview.MyLinearLayout>
+            </com.github.customview.MyLinearLayout>
+
+
+        </LinearLayout>
 
         <com.github.customview.MyLinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <com.github.customview.MyTextView
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:gravity="center"
-                android:text="android"
-                app:my_tv_corner_bottomLeftRadius="25dp"
-                app:my_tv_corner_topRightRadius="25dp"
-                app:my_tv_solid="@color/colorPrimaryDark"
-                />
-
-            <com.github.customview.MyTextView
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="20dp"
-                android:gravity="center"
-                android:text="android"
-                app:my_tv_border_color="@color/colorAccent"
-                app:my_tv_border_width="1dp"
-                app:my_tv_corner_radius="25dp"
-                app:my_tv_solid="@color/colorPrimaryDark"
-                app:my_tv_press="@color/colorAccent"
-                />
-        </com.github.customview.MyLinearLayout>
-
-        <com.github.customview.MyLinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
 
             <com.github.customview.MyLinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:gravity="center_vertical"
+                android:gravity="center"
                 >
 
                 <com.github.customview.MyCheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="true"
-                    android:text="A"
+                    android:text="Android"
                     app:my_checkbox_checked="@drawable/check_select"
                     app:my_checkbox_checked_color="@color/colorPrimaryDark"
                     app:my_checkbox_normal="@drawable/check_normal"
@@ -82,7 +366,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="40dp"
                     android:checked="false"
-                    android:text="B"
+                    android:text="Android"
                     app:my_checkbox_checked="@drawable/check_select"
                     app:my_checkbox_checked_color="@color/colorPrimaryDark"
                     app:my_checkbox_normal="@drawable/check_normal"
@@ -90,162 +374,134 @@
                     />
             </com.github.customview.MyLinearLayout>
 
-            <com.github.customview.MyLinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:gravity="center_vertical"
-                >
-                <com.github.customview.MyCheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:checked="true"
-                    android:text="android"
-                    app:my_checkbox_checked="@drawable/check_select"
-                    app:my_checkbox_checked_color="@color/colorPrimaryDark"
-                    app:my_checkbox_normal="@drawable/check_normal"
-                    app:my_checkbox_normal_color="@color/colorText"
-                    app:my_checkbox_checked_drawable="top"
-                    android:button="@null"
-                    />
 
-                <com.github.customview.MyCheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:checked="false"
-                    android:text="android"
-                    app:my_checkbox_checked="@drawable/check_select"
-                    app:my_checkbox_checked_color="@color/colorPrimaryDark"
-                    app:my_checkbox_normal="@drawable/check_normal"
-                    app:my_checkbox_normal_color="@color/colorText"
-                    app:my_checkbox_checked_drawable="right"
-                    android:button="@null"
-                    />
-            </com.github.customview.MyLinearLayout>
         </com.github.customview.MyLinearLayout>
-    </com.github.customview.MyLinearLayout>
 
-    <com.github.customview.MyLinearLayout
-        android:id="@+id/tv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="20dp"
-        app:my_ll_all_line="true"
-        app:my_ll_border_color="@color/black"
-        app:my_ll_press="@color/colorAccent"
-        >
+        <com.github.customview.MyLinearLayout
+            android:id="@+id/tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            app:my_ll_all_line="true"
+            app:my_ll_border_color="@color/black"
+            app:my_ll_press="@color/colorAccent"
+            >
+
+            <com.github.customview.MyTextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="40dp"
+                android:gravity="center"
+                android:text="android"
+                app:my_tv_border_color="@color/c_icon"
+                app:my_tv_left_line="true"
+                app:my_tv_top_line="true"
+                />
+
+            <com.github.customview.MyTextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="android"
+                app:my_tv_border_color="@color/c_icon"
+                app:my_tv_right_line="true"
+                app:my_tv_top_line="true"
+                />
+        </com.github.customview.MyLinearLayout>
+
+        <com.github.customview.MyLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            app:my_ll_all_line="true"
+            app:my_ll_border_color="@color/black"
+            >
+
+            <com.github.customview.MyTextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="40dp"
+                android:gravity="center"
+                android:text="android"
+                app:my_tv_border_color="@color/c_icon"
+                app:my_tv_bottom_line="true"
+                app:my_tv_left_line="true"
+                />
+
+            <com.github.customview.MyTextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="android"
+                app:my_tv_border_color="@color/c_icon"
+                app:my_tv_bottom_line="true"
+                app:my_tv_right_line="true"
+                />
+        </com.github.customview.MyLinearLayout>
+
+        <com.github.customview.MyLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <com.github.customview.MyEditText
+                android:id="@+id/et"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:text="android"
+                android:textColor="@color/colorText"
+                android:textSize="14sp"
+                app:my_et_border_color="@color/colorPrimary"
+                app:my_et_border_width="1px"
+                />
+
+            <com.github.customview.MyEditText
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:text="android"
+                android:textColor="@color/colorText"
+                android:textSize="14sp"
+                app:my_et_border_color="@color/colorPrimary"
+                app:my_et_border_width="1px"
+                app:my_et_clearIcon="@drawable/text_clear2"
+                />
+        </com.github.customview.MyLinearLayout>
 
         <com.github.customview.MyTextView
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:layout_marginRight="40dp"
-            android:gravity="center"
-            android:text="android"
-            app:my_tv_border_color="@color/c_icon"
-            app:my_tv_top_line="true"
-            app:my_tv_left_line="true"
-            />
-
-        <com.github.customview.MyTextView
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="android"
-            app:my_tv_border_color="@color/c_icon"
-            app:my_tv_right_line="true"
-            app:my_tv_top_line="true"
-            />
-    </com.github.customview.MyLinearLayout>
-
-    <com.github.customview.MyLinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="20dp"
-        app:my_ll_all_line="true"
-        app:my_ll_border_color="@color/black"
-        >
-
-        <com.github.customview.MyTextView
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:layout_marginRight="40dp"
-            android:gravity="center"
-            android:text="android"
-            app:my_tv_border_color="@color/c_icon"
-            app:my_tv_left_line="true"
-            app:my_tv_bottom_line="true"
-            />
-
-        <com.github.customview.MyTextView
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="android"
-            app:my_tv_border_color="@color/c_icon"
-            app:my_tv_right_line="true"
-            app:my_tv_bottom_line="true"
-            />
-    </com.github.customview.MyLinearLayout>
-
-    <com.github.customview.MyLinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
-        <com.github.customview.MyEditText
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
             android:layout_marginTop="10dp"
+            android:gravity="center"
             android:text="android"
-            app:my_et_border_color="@color/colorPrimary"
-            app:my_et_border_width="1px"
-            android:textSize="14sp"
-            android:textColor="@color/colorText"
-            android:layout_marginRight="10dp"
+            app:my_tv_all_line="true"
+            app:my_tv_border_color="@color/colorPrimary"
+            app:my_tv_press="@color/c_press"
             />
-        <com.github.customview.MyEditText
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="30dp"
+
+        <com.github.customview.MyTextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
             android:layout_marginTop="10dp"
+            android:gravity="center"
             android:text="android"
-            app:my_et_border_color="@color/colorPrimary"
-            app:my_et_border_width="1px"
-            android:textSize="14sp"
-            android:textColor="@color/colorText"
-            app:my_et_clearIcon="@drawable/text_clear2"
+            app:my_tv_border_color="@color/colorPrimary"
+            app:my_tv_border_dashGap="5dp"
+            app:my_tv_border_dashWidth="8dp"
+            app:my_tv_border_width="1px"
+            app:my_tv_press="@color/c_press"
             />
-    </com.github.customview.MyLinearLayout>
-    <com.github.customview.MyTextView
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:text="android"
-        app:my_tv_press="@color/c_press"
-        app:my_tv_border_color="@color/colorPrimary"
-        app:my_tv_all_line="true"
-        />
-    <com.github.customview.MyTextView
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:text="android"
-        app:my_tv_press="@color/c_press"
-        app:my_tv_border_color="@color/colorPrimary"
-        app:my_tv_border_width="1px"
-        app:my_tv_border_dashGap="5dp"
-        app:my_tv_border_dashWidth="8dp"
-        />
-</LinearLayout>
+    </LinearLayout>
 
 </ScrollView>
