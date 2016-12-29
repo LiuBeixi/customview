@@ -1,6 +1,6 @@
 # customview
     由于平时开发项目需要定义各种形状的view,导致项目中增加很多shape之类的xml,而且有时候仅仅因为颜色值不一样也需要新建xml文件,开发效率和维护效率也不高,为了方便日常开发自己就简单的自定义了部分view,通过布局文件里面的自定义属性控制view形状,开发时比较方便(由于代码比较简单,适合android初学者,大神可以直接无视)
->![github](https://github.com/2380253499/customview/blob/master/study/app/src/main/res/drawable/demo.png "github") 
+>![github](https://github.com/2380253499/customview/blob/master/study/app/src/main/res/drawable/demo2.png "github") 
 >### MyCheckBox,MyRadioButton用法
 <br />my_checkbox_checked——设置选中状态的button
 <br/>my_checkbox_normal——设置未选中状态的button
