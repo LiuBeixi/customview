@@ -42,6 +42,24 @@
             <enum name="bottom" value="4"></enum>
         </attr>
     </declare-styleable>
+    <declare-styleable name="MyRelativeLayout">
+        <attr name="my_rl_solid" format="color"/>
+        <attr name="my_rl_border_width" format="dimension"/><!--线的宽度-->
+        <attr name="my_rl_border_color" format="color"/>
+        <attr name="my_rl_border_dashWidth" format="dimension"/>
+        <attr name="my_rl_border_dashGap" format="dimension"/><!--虚线间距-->
+        <attr name="my_rl_corner_radius" format="dimension"/>
+        <attr name="my_rl_corner_topLeftRadius" format="dimension"/>
+        <attr name="my_rl_corner_topRightRadius" format="dimension"/>
+        <attr name="my_rl_corner_bottomLeftRadius" format="dimension"/>
+        <attr name="my_rl_corner_bottomRightRadius" format="dimension"/>
+        <attr name="my_rl_all_line" format="boolean"/>
+        <attr name="my_rl_left_line" format="boolean"/>
+        <attr name="my_rl_top_line" format="boolean"/>
+        <attr name="my_rl_right_line" format="boolean"/>
+        <attr name="my_rl_bottom_line" format="boolean"/>
+        <attr name="my_rl_press" format="reference"/>
+    </declare-styleable>
     <declare-styleable name="MyLinearLayout">
         <attr name="my_ll_solid" format="color"/>
         <attr name="my_ll_border_width" format="dimension"/><!--线的宽度-->
@@ -59,6 +77,24 @@
         <attr name="my_ll_right_line" format="boolean"/>
         <attr name="my_ll_bottom_line" format="boolean"/>
         <attr name="my_ll_press" format="reference"/>
+    </declare-styleable>
+    <declare-styleable name="MyFrameLayout">
+        <attr name="my_fl_solid" format="color"/>
+        <attr name="my_fl_border_width" format="dimension"/><!--线的宽度-->
+        <attr name="my_fl_border_color" format="color"/>
+        <attr name="my_fl_border_dashWidth" format="dimension"/>
+        <attr name="my_fl_border_dashGap" format="dimension"/><!--虚线间距-->
+        <attr name="my_fl_corner_radius" format="dimension"/>
+        <attr name="my_fl_corner_topLeftRadius" format="dimension"/>
+        <attr name="my_fl_corner_topRightRadius" format="dimension"/>
+        <attr name="my_fl_corner_bottomLeftRadius" format="dimension"/>
+        <attr name="my_fl_corner_bottomRightRadius" format="dimension"/>
+        <attr name="my_fl_all_line" format="boolean"/>
+        <attr name="my_fl_left_line" format="boolean"/>
+        <attr name="my_fl_top_line" format="boolean"/>
+        <attr name="my_fl_right_line" format="boolean"/>
+        <attr name="my_fl_bottom_line" format="boolean"/>
+        <attr name="my_fl_press" format="reference"/>
     </declare-styleable>
     <declare-styleable name="MyEditText">
         <attr name="my_et_solid" format="color"/>
