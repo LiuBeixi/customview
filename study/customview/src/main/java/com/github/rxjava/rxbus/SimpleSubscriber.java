@@ -3,11 +3,12 @@ package com.github.rxjava.rxbus;
 import rx.Subscriber;
 
 /**
- * Created by Administrator on 2016/12/12.
+ * Created by Administrator on 2017/1/12.
  */
-public abstract class MySubscriber<T> extends Subscriber {
+public abstract class SimpleSubscriber<T> extends Subscriber {
     public abstract void onMyNext(T obj);
-    public abstract void onResult(boolean isCompleted,Throwable e);
+    public void onResult(boolean isCompleted,Throwable e) {
+    }
     @Override
     public void onCompleted() {
         onResult(true,null);
